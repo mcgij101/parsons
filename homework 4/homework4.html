@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JM</title>
+<style>
+html, body{
+margin: 0px;
+width: 100%;
+height: 100%;
+animation: colorchange 50s;
+
+/*colors used in piece:
+background color: #a7a49d
+first box (left): #5b5d81
+second box: #d37e83
+third box: #342e31
+fourth box: #d23330
+fifth box: #83bb97
+sixth box: #d572b0
+seventh box (right): #547ea4
+overlapping boxes: #926891;
+*/
+}
+
+.swatchb1{
+  position: fixed;
+  top:45%;
+  left:15%;
+  width:150px;
+  height:200px;
+  background-color: #d37e83;
+  opacity: 0.6;
+  overflow: #d37e83;
+}
+.swatchb2{
+  position: fixed;
+  top:45%;
+  left:45%;
+  width:170px;
+  height:150px;
+  background-color: #d23330;
+  opacity: 0.6;
+}
+.swatchb3{
+  position: fixed;
+  top:45%;
+  left:75%;
+  width:170px;
+  height:190px;
+  background-color: #d572b0;
+  opacity: 0.6;
+}
+.swatcht1{
+  position: fixed;
+  top:33%;
+  left:5%;
+  width:125px;
+  height:195px;
+  background-color: #5b5d81;
+  opacity: 0.6;
+}
+.swatcht2{
+  position: fixed;
+  top:38%;
+  left:25%;
+  width:200px;
+  height:155px;
+  background-color: #342e31;
+  opacity: 0.6;
+}
+.swatcht3{
+  position: fixed;
+  top:33%;
+  left:60%;
+  width:150px;
+  height:195px;
+  background-color: #83bb97;
+  opacity: 0.6;
+}
+.swatcht4{
+  position: fixed;
+  top:26%;
+  left:80%;
+  width:187px;
+  height:270px;
+  background-color: #547ea4;
+  opacity: 0.6;
+}
+
+@keyframes bounce{
+
+  50%{
+    transform: translate(0px, 100px);
+  }
+  100%{
+    transform-origin: initial;
+  }
+}
+@keyframes bouncee{
+  50%{
+    transform: translate(0px, 200px);
+  }
+  100%{
+    transform-origin: initial;
+
+}
+}
+
+.bounce1{
+  animation: fadein 5s linear 1 normal forwards, bouncee 2s infinite;
+  animation-delay: 7s;
+}
+.bounce2{
+  animation: fadein 5s linear 1 normal forwards, bouncee 2s infinite;
+  animation-delay: 8s;
+}
+.bounce3{
+  animation: fadein 5s linear 1 normal forwards, bouncee 2s infinite;
+  animation-delay: 9s;
+}
+.bounce4{
+  animation: fadein 5s linear 1 normal forwards, bouncee 2s infinite;
+  animation-delay: 10s;
+
+}
+.bounce5{
+  animation: fadein 5s linear 1 normal forwards, bouncee 2s infinite;
+  animation-delay: 11s;
+}
+.bounce6{
+  animation: fadein 5s linear 1 normal forwards, bouncee 2s infinite;
+  animation-delay: 12s;
+}
+.bounce7{
+  animation: fadein 5s linear 1 normal forwards, bouncee 2s infinite;
+  animation-delay: 13s;
+}
+
+   
+
+
+@keyframes fadein{
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+ }
+
+@keyframes colorchange
+    {
+      0%   {background: #a7a49d;}
+      15%  {background: #a7a49d;}
+      50%  {background: white;}
+      75%  {background: white;}
+      100% {background: white;}
+    }
+
+
+</style>
+</head>
+<body>
+<div class="swatchb1 bounce1"></div>
+<div class="swatchb2 bounce2"></div>
+<div class="swatchb3 bounce3"></div>
+<div class="swatcht1 bounce4"></div>
+<div class="swatcht2 bounce5"></div>
+<div class="swatcht3 bounce6"></div>
+<div class="swatcht4 bounce7"></div>
+
+
+</body>
+</html>

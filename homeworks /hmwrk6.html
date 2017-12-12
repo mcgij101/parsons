@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+var str = "test";
+var story = "Its Cardi, ayy Said, Im the shit, they cant fuck with me if they wanted to Said, Lil bitch, you cant fuck with me if you wanted to These expensive, these is red bottoms, these is bloody shoes Hit the store, I can get em both, I dont wanna choose And Im quick, cut a nigga off, so dont get comfortable, look I dont dance now, I make money moves Say I dont gotta dance, I make money move If I see you and I dont speak, that means I dont fuck with you Im a boss, you a worker, bitch, I make bloody moves Now she say she gon do what to who? Lets find out and see Cardi B, you know where Im at, you know where I beYou in the club just to party, Im there, I get paid a fee I be in and out them banks so much, I know theyre tired of me Honestly, dont give a fuck bout who aint fond of me Dropped two mixtapes in six months, what bitch working as hard as me? I dont bother with these hoes, dont let these hoes bother me They see pictures, they say, Goals, bitch, Im who they tryna be Look, I might just chill in some BAPE, I might just chill with your boo I might just feel on your babe, my pussy feel like a lake He wanna swim with his face, Im like, Okay Ill let him get what he want, he buy me Yves Saint Laurent And the new whip, when I go fast as a horse, I got the trunk in the front I'm the hottest in the street, know you prolly heard of me Got a bag and fixed my teeth, hope you hoes know it aint cheap And I pay my mama bills, I aint got no time to chill Think these hoes be mad at me, their baby father run a bill Said, Lil bitch, you cant fuck with me if you wanted to These expensive, these is red bottoms, these is bloody shoes Hit the store, I can get em both, I dont wanna choose And Im quick, cut a nigga off, so dont get comfortable, look";
+
+// https://genius.com/Cardi-b-bodak-yellow-lyrics
+
+var words = story.split(/\s+/);
+
+var dictonary = {};
+
+for(var i = 0; i < words.length-1; i = i + 1){
+	var word = words [i];
+	var nextword = words [i+1];
+	if(dictonary[word] == undefined){
+		dictonary[word] = [];		
+	}
+	dictonary[word].push(nextword);
+}
+
+var startword = words[ Math.floor( Math.random() * words.length) ];
+
+var phrase = [startword];
+
+
+for(var i = 0; i < 35; i++){
+	var word = phrase[i];
+	var nextwords = dictonary[word];
+	var nextword = nextwords[ Math.floor(Math.random()*nextwords.length) ];
+	phrase.push(nextword);
+
+}
+
+console.log(phrase);
+
+for(var i = 0; i < phrase.length; i++){
+	document.body.innerHTML += phrase[i] + " ";
+}
+</script>
+</body>
+</html>
